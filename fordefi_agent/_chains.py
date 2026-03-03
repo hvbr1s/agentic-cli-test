@@ -539,7 +539,7 @@ def build_personal_message_payload(
         "sign_mode": "auto",
         "type": "evm_message",
         "details": {
-            "type": "personal_message",
+            "type": "personal_message_type",
             "raw_data": hex_encoded,
             "chain": cfg.chain_id,
         },
@@ -573,7 +573,7 @@ def build_typed_data_payload(
         "sign_mode": "auto",
         "type": "evm_message",
         "details": {
-            "type": "typed_message",
+            "type": "typed_message_type",
             "raw_data": hex_encoded,
             "chain": cfg.chain_id,
         },

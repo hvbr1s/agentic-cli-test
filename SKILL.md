@@ -237,7 +237,9 @@ Both signing methods return:
 
 ## Swaps
 
-Swap tokens on EVM chains and Solana. The client automatically fetches providers, gets quotes, picks the best one, and submits:
+Swap tokens on EVM chains and Solana. The client automatically fetches providers, gets quotes, picks the best one, and submits.
+
+**Important: ERC-20 swaps may involve multiple transactions.** When swapping ERC-20 tokens (not native assets), Fordefi may need to submit an approval transaction before the swap itself. This is handled automatically as a batch - you don't need to manage approvals manually. The returned `transaction_id` refers to the swap transaction, but be aware that the overall execution may take longer due to the approval step. The provider that ultimately executes the swap may also differ from the "best quote" provider if that provider's route fails.
 
 ```python
 # Swap ETH for USDC on Ethereum

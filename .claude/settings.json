@@ -4,7 +4,8 @@
       "Bash(uv lock)",
       "Bash(uv sync)",
       "Read(//Users/danjaheny/Fordefi/api-examples/python/evm-message-signing/**)",
-      "Bash(uv run python -c \"from fordefi_agent import FordefiClient; print\\(''sign_personal_message'' in dir\\(FordefiClient\\)\\); print\\(''sign_typed_data'' in dir\\(FordefiClient\\)\\)\")"
+      "Bash(uv run python -c \"from fordefi_agent import FordefiClient; print\\(''sign_personal_message'' in dir\\(FordefiClient\\)\\); print\\(''sign_typed_data'' in dir\\(FordefiClient\\)\\)\")",
+      "Bash(git commit:*)"
     ]
   }
 }

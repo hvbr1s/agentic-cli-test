@@ -345,6 +345,11 @@ class FordefiClient:
     ) -> dict:
         """Execute a token swap (full workflow: providers -> quotes -> submit).
 
+        Note: ERC-20 swaps may result in multiple transactions. If the sell
+        token requires approval, Fordefi automatically creates an approve tx
+        before the swap as a batch. The executing provider may also differ
+        from the best-quote provider if that provider's route fails.
+
         Args:
             chain: Chain name (e.g. "ethereum", "solana").
             sell_token: Token to sell ("native" for native asset, or contract address).
